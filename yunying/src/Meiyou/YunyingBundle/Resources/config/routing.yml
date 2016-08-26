@@ -1,0 +1,3 @@
+meiyou_yunying_homepage:
+    path:     /
+    defaults: { _controller: MeiyouYunyingBundle:Default:index }
