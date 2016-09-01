@@ -1,0 +1,16 @@
+parameters:
+#    Fcx_data.example.class: Fcx\DataBundle\Example
+
+services:
+#    Fcx_data.example:
+#        class: %Fcx_data.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    library_model_adminuser:
+        class: Fcx\LibraryBundle\Model\AdminUserModel
+        arguments: ['@doctrine.orm.entity_manager']
+        
+    library_model_newhousemd:
+        class: Fcx\LibraryBundle\Model\MongoDB\NewHouseMD
+        arguments: ['@doctrine_mongodb.odm.document_manager',"@knp_paginator"]
+    
